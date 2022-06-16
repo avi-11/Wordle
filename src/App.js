@@ -1,7 +1,32 @@
+import { useEffect, useState } from "react";
 import "./assets/main.css";
+import axios from "axios";
+import Wordle from "./components/Wordle";
 
 function App() {
-  return <div className="text-red-800">kya yeh laal hua ?</div>;
+  const [solution, setSolution] = useState([]);
+
+  useEffect(() => {
+    const endpointSol = "https://random-word-api.herokuapp.com/word?length=5";
+
+    async function getSolution() {
+      try {
+        const response = await axios.get(endpointSol);
+        setSolution(response.data);
+        console.log(response.data);
+      } catch (error) {
+        console.log("somry");
+      }
+    }
+    getSolution();
+  }, []);
+
+  return (
+    <div>
+      <h1>Wordle</h1>
+      {solution && <Wordle solution={solution} />}
+    </div>
+  );
 }
 
 export default App;
