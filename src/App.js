@@ -4,7 +4,7 @@ import axios from "axios";
 import Wordle from "./components/Wordle";
 
 function App() {
-  const [solution, setSolution] = useState([]);
+  const [solution, setSolution] = useState(null);
 
   useEffect(() => {
     const endpointSol = "https://random-word-api.herokuapp.com/word?length=5";
@@ -12,7 +12,7 @@ function App() {
     async function getSolution() {
       try {
         const response = await axios.get(endpointSol);
-        setSolution(response.data);
+        setSolution(response.data[0]);
         console.log(response.data);
       } catch (error) {
         console.log("somry");
