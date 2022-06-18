@@ -86,7 +86,13 @@ const useWordle = (solution) => {
     }
   };
 
-  return { turn, currentGuess, guesses, isCorrect, handleKeyUp };
+  return {
+    turn,
+    currentGuess,
+    guesses,
+    isCorrect,
+    handleKeyUp,
+  };
 };
 
 export default useWordle;
