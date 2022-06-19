@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./assets/main.css";
+
 import axios from "axios";
 import Wordle from "./components/Wordle";
 
