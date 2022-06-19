@@ -13,7 +13,9 @@ const Keypad = ({ handleKeyUp, usedKeys, turn, isCorrect }) => {
   };
   return (
     <div className="keypad">
-      <div onClick={(e) => handle("Enter")}>Enter</div>
+      <div className="text-sm" onClick={(e) => handle("Enter")}>
+        Enter
+      </div>
       {"abcdefghijklmnopqrstuvwxyz".split("").map((l) => {
         const color = usedKeys[l];
         return (
@@ -22,7 +24,7 @@ const Keypad = ({ handleKeyUp, usedKeys, turn, isCorrect }) => {
           </div>
         );
       })}
-      <div onClick={(e) => handle("Backspace")}>Backspace</div>
+      <div onClick={(e) => handle("Backspace")}>Del</div>
     </div>
   );
 };
