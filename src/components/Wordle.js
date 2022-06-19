@@ -1,30 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import useWordle from "../hooks/useWordle";
 import Grid from "./Grid";
+import Keypad from "./Keypad";
+import Modal from "./Modal";
 
 const Wordle = ({ solution }) => {
-  const {
-    currentGuess,
-    handleKeyUp,
-
-    guesses,
-    isCorrect,
-    turn,
-  } = useWordle(solution);
+  const [showModal, setShowModal] = useState(false);
+  const { currentGuess, handleKeyUp, usedKeys, guesses, isCorrect, turn } =
+    useWordle(solution);
   useEffect(() => {
     window.addEventListener("keyup", handleKeyUp);
 
-    return () => window.removeEventListener("keyup", handleKeyUp);
-  }, [handleKeyUp]);
+    if (isCorrect) {
+      setTimeout(() => setShowModal(true), 2000);
+      window.removeEventListener("keyup", handleKeyUp);
+    }
 
-  useEffect(() => {
-    console.log(guesses, isCorrect, turn);
-  }, [guesses, isCorrect, turn]);
+    if (turn > 5) {
+      setTimeout(() => setShowModal(true), 2000);
+      window.removeEventListener("keyup", handleKeyUp);
+    }
+
+    return () => window.removeEventListener("keyup", handleKeyUp);
+  }, [handleKeyUp, isCorrect, turn]);
+
   return (
     <div>
-      <h1>solution is - {solution}</h1>
-      <h1>Current guess - {currentGuess}</h1>
       <Grid currentGuess={currentGuess} turn={turn} guesses={guesses} />
+      <Keypad
+        handleKeyUp={handleKeyUp}
+        usedKeys={usedKeys}
+        turn={turn}
+        isCorrect={isCorrect}
+      />
+      {showModal && (
+        <Modal isCorrect={isCorrect} solution={solution} turn={turn} />
+      )}
     </div>
   );
 };
