@@ -9,17 +9,14 @@ body {
   margin: 0;
 }
 
-.app {
-  background-color: #333;
-  height: 100vh;
-}
+
 
 h1 {
   font-size: 1.2em;
   padding: 20px 0;
-  margin: 1rem 0;
+  margin: 4px 0;
   margin: 0 0 30px 0;
-  color: rgb(188, 182, 182);
+  color: rgb(27, 27, 27);
 }
 
 /* rows */
@@ -44,8 +41,8 @@ h1 {
   isplay: block;
   width: 65px;
   height: 65px;
-  border: 1px solid #8cbace;
-  box-shadow: 0px 2px 4px aliceblue;
+  border: 1px solid #6dacc7;
+  box-shadow: 0px 2px 4px rgb(12, 58, 99);
   margin: 8px;
   text-align: center;
   line-height: 60px;
@@ -146,10 +143,15 @@ h1 {
   margin: 8px;
   width: 40px;
   height: 50px;
-  background: #eee;
+  background: #cdcdcd;
   display: inline-block;
   border-radius: 6px;
   line-height: 50px;
+  transition-duration: 1s;
+}
+
+.keypad>div:hover {
+  transform: scale(1.2);
 }
 
 .keypad>div.green {
