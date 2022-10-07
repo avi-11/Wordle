@@ -116,7 +116,7 @@ h1 {
   }
 
   50% {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
 
   100% {
@@ -131,7 +131,7 @@ h1 {
 }
 
 .keypad>div {
-  margin: 5px;
+  margin: 8px;
   width: 40px;
   height: 50px;
   background: #eee;
@@ -141,13 +141,13 @@ h1 {
 }
 
 .keypad>div.green {
-  background: #5ac85a;
+  background: #23c823;
   color: #fff;
   transition: all 0.3s ease-in;
 }
 
 .keypad>div.yellow {
-  background: #e2cc68;
+  background: #eefa4c;
   color: #fff;
   transition: all 0.3s ease-in;
 }
@@ -177,7 +177,7 @@ h1 {
 }
 
 .modal .solution {
-  color: #ff004c;
+  color: #f91863;
   font-weight: bold;
   font-size: 0.8em;
   text-transform: uppercase;
