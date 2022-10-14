@@ -16,7 +16,7 @@ const Keypad = ({ handleKeyUp, usedKeys, turn, isCorrect }) => {
       <div className="text-sm" onClick={(e) => handle("Enter")}>
         Enter
       </div>
-      {"abcdefghijklmnopqrstuvwxyz".split("").map((l) => {
+      {"ABCDEFGHIJKLMNOPQRSTUVXYZ".split("").map((l) => {
         const color = usedKeys[l];
         return (
           <div key={l} className={color} onClick={(e) => handle(l)}>
