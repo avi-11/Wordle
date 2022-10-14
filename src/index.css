@@ -34,44 +34,44 @@ h1 {
 }
 
 .logo:hover {
-  transform: rotateZ(5deg);
+  transform: rotateZ(-8deg);
 }
 
 .row>div {
-  isplay: block;
-  width: 65px;
-  height: 65px;
-  border: 1px solid #6dacc7;
-  box-shadow: 0px 2px 4px rgb(12, 58, 99);
-  margin: 8px;
-  text-align: center;
-  line-height: 60px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 2.5em;
+  display: block;
+  width: 66px;
+    height: 66px;
+    border: 1px solid #6dc78c;
+    box-shadow: 2px 2px 4px rgb(12 99 26);
+    margin: 8px;
+    text-align: center;
+    line-height: 52px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5em;
 
 }
 
 .row>div.green {
   --background: #5ac85a;
   --border-color: #5ac85a;
-  animation: flip 0.5s ease forwards;
+  animation: flip 0.6s ease forwards;
 }
 
 .row>div.grey {
   --background: #a1a1a1;
   --border-color: #a1a1a1;
-  animation: flip 0.6s ease forwards;
+  animation: flip 0.5s ease forwards;
 }
 
 .row>div.yellow {
   --background: #e2cc68;
   --border-color: #e2cc68;
-  animation: flip 0.5s ease forwards;
+  animation: flip 0.6s ease forwards;
 }
 
 .row>div:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: 0.3s;
 }
 
 .row>div:nth-child(3) {
