@@ -27,10 +27,10 @@ h1 {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  transform: rotateZ(-5deg);
-  transition-duration: 1s;
+  font-size: 2.5rem;
+    font-weight: bolder;
+    transform: rotateZ(-8deg);
+    transition-duration: 2s;
 }
 
 .logo:hover {
