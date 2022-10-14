@@ -136,18 +136,18 @@ h1 {
 
 .keypad {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 24px auto;
 }
 
 .keypad>div {
   margin: 8px;
-  width: 40px;
-  height: 50px;
-  background: #cdcdcd;
-  display: inline-block;
-  border-radius: 6px;
-  line-height: 50px;
-  transition-duration: 1s;
+    width: 42px;
+    height: 48px;
+    background: #ded8d8;
+    display: inline-block;
+    border-radius: 6px;
+    line-height: 52px;
+    transition-duration: 2s;
 }
 
 .keypad>div:hover {
